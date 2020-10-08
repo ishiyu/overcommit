@@ -1,4 +1,5 @@
 gemfile: Gemfile
+bundle_app_config: '.bundle'
 
 PreCommit:
   # Disabled since this causes spurious failures on AppVeyor builds

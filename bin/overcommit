@@ -5,6 +5,11 @@
 require 'yaml'
 if gemfile = YAML.load_file('.overcommit.yml')['gemfile'] rescue nil
   ENV['BUNDLE_GEMFILE'] = gemfile
+
+  if app_config = YAML.load_file('.overcommit.yml')['bundle_app_config'] rescue nil
+    ENV['BUNDLE_APP_CONFIG'] = app_config
+  end
+
   require 'bundler'
 
   begin
